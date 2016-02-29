@@ -1,4 +1,6 @@
 # HappieStreamChallenge
 Week of 2/27/2016: Create an RPG text adventure and post it to r/TheHappieMakers! Each week will be a new challenge.
 
-Every week I will stream on Youtube (https://www.youtube.com/user/TheHappieCat) on Saturday at 12PM CST. Each stream will be focused on some topic followed by a challenge that will last ~1-4 weeks. You can fork the code on my Github here or make your own from scratch. Be sure to post your code on Github (don't zip an EXE!) and link it on the subreddit (https://www.reddit.com/r/TheHappieMakers/). Let's make some cool stuff :D
+Hi HappyCat! I have done this with my fair knowledge of javascript and python and I hope you like it!
+
+Guacamole is your life. You and your brother Dante strive towards creating the perfect bowl of guacamole. However, that goal seems to seem impossible to reach now that your entire world has been flipped upside down...
