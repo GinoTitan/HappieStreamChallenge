@@ -1,8 +1,7 @@
 #include "Player.h"
 #include "Enemy.h"
 
-Enemy::Enemy()
-{
+Enemy::Enemy() {
 	health = 100;
 	stamina = 100;
 	strength = 10;
@@ -10,8 +9,7 @@ Enemy::Enemy()
 	id = 0;
 }
 
-void Enemy::attack(Character& c)
-{
+void Enemy::attack(Character& c) {
 	c.health -= strength;
 	return;
 }

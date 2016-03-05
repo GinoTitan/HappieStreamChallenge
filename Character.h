@@ -1,8 +1,7 @@
 #pragma once
 #include <string>
 
-class Character
-{
+class Character {
 public:
 	int health;
 	int stamina;

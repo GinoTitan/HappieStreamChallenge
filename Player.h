@@ -2,8 +2,7 @@
 #include <string>
 #include "Character.h"
 
-class Player : public Character
-{
+class Player : public Character {
 
 public:
 	std::string name;
