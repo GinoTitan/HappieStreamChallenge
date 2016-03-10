@@ -7,6 +7,15 @@ via my subreddit. Thanks for checking under the hood and enjoy!
 '''
 
 enter = " (Press ENTER to continue...)"
+
+sad = ["bad","down","angry","sad","sick", "not good"] # A1
+glad = ["good","great","awesome","fantastic","okay","well","fine","puppy"] # A2
+activities = ["nothing","talk","play","teach"] # B
+maths = ["pi","tau"," e "," e."] # C1 BTW I no British I just like Matt Parker
+sweets = ["candy","twix","kitkat","kit-kat","gum","bar","bread","m&m","skittles","klondike","snickers","donut","cake","brownie"] # C2
+fruit = ["fruit","kiwi","apple","orange","lemon","lime","watermelon","blueberr","grape","guava","tomato",] # C3
+veggies = ["broccoli", "carrot","cauliflower","eggplant","pupp","potato","rotten"] # C4
+
 def Phi(name):
 	if name == "Spot":
 		spotify()
@@ -141,25 +150,37 @@ def evieBot(boolean):
 	input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
 	input("I will follow in the footsteps of Baxter and refrain from using the normal battle system." + enter)
 	input("--| Begin Open Ended Conversation! With your host, Robo-pup Charles IV |--")
-	snape = talk("Robo-pup","Hello! How are you doing?")
-	if check(snape, ["bad","down","angry","sad","sick"]):
+	snape = talk("Robo-pup","Hello! How are you doing?").lower()
+	if check(snape, sad):
 		mood = False
-		snape = talk("Robo-pup","So sorry you're not feeling well. Anything I can do to help?")
-		if check(snape, ["nothing","talk","play","teach"]):
+		snape = talk("Robo-pup","So sorry you're not feeling well. Anything I can do to help?").lower()
+		if check(snape, activities):
 			input("Robo-pup: I believe I can do that." + enter)
 		else:
 			input("Robo-pup: I don't think I could do THAT, but I'll do my best to do something else." + enter)
-	elif check(snape, ["good","great","awesome","fantastic","okay","well","fine","puppy"]):
+	elif check(snape, glad):
 		mood = True
 		input("Robo-pup: Glad to hear it." + enter)
-	snape = talk("Robo-pup", "Do you like any kind of food?")
-	if check(snape, ["pi","tau"," e "," e."]) or snape[0:1] = "e " or snape[0:1] = "e.":
+	snape = talk("Robo-pup", "Do you like any kind of food?").lower()
+	if check(snape, maths) or snape[0:1] = "e " or snape[0:1] = "e.":
 		input("Mmm! Mathematical Constants!" + enter)
-	elif check(snape, ["candy","twix","kitkat","kit-kat","gum","bar","bread","m&m","skittles","klondike","snickers","donut","cake","brownie",]):
+	elif check(snape, sweets):
 		input("Robo-pup: I hear those are bad for your health." + enter)
-	elif check(snape, ["fruit","kiwi","apple","orange","lemon","lime","watermelon","blueberr","grape","guava"]):
+	elif check(snape, fruit):
 		input("Robo-pup: Ooh, getting fruity up in here! I like your fruit style!" + enter)
-	elif check(snape, )
+	elif check(snape, veggies):
+		input("They may taste horrible, but they're good for you I guess!" + enter)
+	else:
+		input("Sorry, no idea what THAT is! Sounds delicious though." + enter)
+	print("Robo-pup","BTW Dude, I'm gonna take over the world and stuff, you wanna help?")
+	draw = "Farts"
+	while draw != "1" and draw != "2":
+		draw = input("Robo-pup turns around. An important looking red wire is sticking out. 1: [Cut Wire] 2. [Don't Cut]\n> ")
+	if draw == 1:
+		input("Before you could cut it with a conveniently placed wire cutter, Robo-pup turns around and sees you trying to kill him." + enter)
+		input("He looks surprised. Now angry." + enter)
+		input("That looks like a chainsaw. Better run. GAME OVER" + enter)
+	
 def check(str, array):
 	for word in array:
 		if str.find(word):

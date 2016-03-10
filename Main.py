@@ -10,7 +10,7 @@ name = input("???: Hello, human! Oh...you must be the trainer the owner hired. W
 while len(name) < 4:
 	name = input("Spot: That name's TOO short! Try again, with some more of those letter things on your 'typey box' there!\n> ")
 
-'''asciiScramble = chr(ord(name[0]) + 1) + name[1:]
+asciiScramble = chr(ord(name[0]) + 1) + name[1:]
 input("Spot: Ooh, \"" + name + "\"! I like it. Us puppies are very fond of anything that rhymes with " + asciiScramble + "!" + enter)
 input("Spot: Wait. Don't tell me. YOU'RE AN UNTRAINED PUPPY TRAINER! Don't worry, though. I consider myself an expert in puppy training, as I have firsthand knowledge of how puppies work. Follow me!" + enter)
 input("Spot: All right, so you can [Pet], [Talk], or [Play] with any kind of puppy, but there are some extra ones as well, for specific puppies. You need to judge what you should do based on how the puppy is acting." + enter)
@@ -55,7 +55,10 @@ if typePlz == "1":
 	input("Baxter: Okay, well " + name + " has decided, just like you wanted. So let's go to Robo-pup's room." + enter)
 	input("Baxter: I'd prefer if you'd do this alone...Robo-pup doesn't exactly like me..." + enter)
 	input("Robo-pup: [Beeping]" + enter)
-	Puppy.Phi("Robo-pup")
+	returnSnape = Puppy.Phi("Robo-pup")
+	while not returnSnape:
+		input("Try again!")
+		returnSnape = Puppy.Phi("Robo-pup")
 else:
 	input("Spot: See, Baxter? Our trainer " + name + " has chosen Ralphy." + enter)
 	input("Baxter: Okay, I can respect that, but we NEED to get to Robo-pup IMMEDIATELY afterwards!" + enter)
