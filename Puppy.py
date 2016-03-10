@@ -1,8 +1,25 @@
+'''
+VERY sorry to anyone who wants to look at the source code, as I presume it will be painful. I made the executive decision
+to write all the battles in code, as it would allow a greater freedom and ease when making them which a 'battle object'
+just couldn't implement without some skill beyond my programming experience, the equivalent of a 6-year-old. I have made multiple
+arrays for a certain battle where it will find those items in a string and respond accordionly. Feel free to add some items
+via my subreddit. Thanks for checking under the hood and enjoy!
+'''
+
+enter = " (Press ENTER to continue...)"
 def Phi(name):
 	if name == "Spot":
 		spotify()
 	elif name == "Baxter":
 		hashtagAnime()
+	elif name == "Robo-pup":
+		evieBot(False)
+	elif name == "Robo-pup2":
+		evieBot(True)
+	elif name == "Ralphy":
+		garCHOMP(False)
+	elif name == "Ralphy2":
+		garCHOMP(True)
 	else:
 		return False;
 	return True
@@ -11,7 +28,7 @@ def spotify():
 	input("--| Begin Battle! Random Puppy |--")
 	stage = "start"
 	while True:
-		brb = input("1: [Talk] 2: [Pet] 3: [Play]\n")
+		brb = input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
 		if brb == "1":
 			if stage == "start" or stage == "sadStart":
 				input("You talked with the puppy. She thinks you're going to play fetch with her.")
@@ -47,7 +64,7 @@ def spotify():
 
 def hashtagAnime():
 	input("--| Begin Battle! Baxter |--")
-	input("1: [Talk] 2: [Pet] 3: [Play]\n")
+	input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
 	
 	input("Baxter: No no no, this outdated menu needs an overhaul; it TOTALLY does NOT reflect my battle style!" + enter)
 	input("Baxter: Okay, let's see...oh! Here's the code! Cool... x86 hex instructions have never been so...Baxter-y!" + enter)
@@ -57,7 +74,7 @@ def hashtagAnime():
 	input("--| Begin Battle! AWESOME-1337 Baxter |--")
 	stage = 0;
 	while True:
-		brx = input("1: [Uh huh]\n")
+		brx = input("1: [Uh huh]\n> ")
 		if brx == "1":
 			if stage == 0:
 				input("Baxter: Yep. I am DEFINITELY feeling this battle screen! Now I can show you some of my stuff.")
@@ -92,30 +109,62 @@ def hashtagAnime():
 			elif stage == 15:
 				input("Baxter: Oh, by the way...")
 			elif stage == 16:
-				input("Baxter: Your name's \"" + name + "\", right?")
-			elif stage == 17:
 				input("Baxter: I have a quiz for you. Just to make sure you were listening.")
 			else:
 				break
 			stage += 1
 		else:
 			print("Invalid command, N00B.")
-	answ = input("Question 1: Tau = n * Pi. what does n equal?")
+	answ = input("Question 1: Tau = n * Pi. what does n equal?\n> ")
 	if answ.lower() == "two" or answ == "2":
 		print("Yay! you got it right!")
 	else:
 		print("Nope! I was looking for 2.")
-	answ = input("Question 2: Disneyworld relies on the surrounding cities's lax electrical restraints to run. True or False?")
+	answ = input("Question 2: Disneyworld relies on the surrounding cities's lax electrical restraints to run. True or False?\n> ")
 	if answ.lower() == "false" or answ.lower() == "f" or answ.lower() == "n" or answ.lower() == "no":
 		print("Yay! you got it right!")
 	else:
 		print("Nope! I was looking for False.")
 		
-	answ = input("Question 3: What is the maximum brightness of a blue light of a pixel?")
+	answ = input("Question 3: What is the maximum brightness of a blue light of a pixel?\n> ")
 	if answ == "255":
 		print("Yay! you got it right!")
 	else:
 		print("Nope! I was looking for 255.")
-	input("Baxter: Welp. Your score doesn't really matter. All that matters is that you listened.")
+	input("Baxter: Welp. Your score doesn't really matter. All that matters is that you listened. I guess.")
 	input("PUPPY BEFRIENDED! You win!")
 	return True;
+	
+def evieBot(boolean):
+	mood = "Ternary"
+	input("--| Begin Battle! Robo-pup Charles IV |--")
+	input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
+	input("I will follow in the footsteps of Baxter and refrain from using the normal battle system." + enter)
+	input("--| Begin Open Ended Conversation! With your host, Robo-pup Charles IV |--")
+	snape = talk("Robo-pup","Hello! How are you doing?")
+	if check(snape, ["bad","down","angry","sad","sick"]):
+		mood = False
+		snape = talk("Robo-pup","So sorry you're not feeling well. Anything I can do to help?")
+		if check(snape, ["nothing","talk","play","teach"]):
+			input("Robo-pup: I believe I can do that." + enter)
+		else:
+			input("Robo-pup: I don't think I could do THAT, but I'll do my best to do something else." + enter)
+	elif check(snape, ["good","great","awesome","fantastic","okay","well","fine","puppy"]):
+		mood = True
+		input("Robo-pup: Glad to hear it." + enter)
+	snape = talk("Robo-pup", "Do you like any kind of food?")
+	if check(snape, ["pi","tau"," e "," e."]) or snape[0:1] = "e " or snape[0:1] = "e.":
+		input("Mmm! Mathematical Constants!" + enter)
+	elif check(snape, ["candy","twix","kitkat","kit-kat","gum","bar","bread","m&m","skittles","klondike","snickers","donut","cake","brownie",]):
+		input("Robo-pup: I hear those are bad for your health." + enter)
+	elif check(snape, ["fruit","kiwi","apple","orange","lemon","lime","watermelon","blueberr","grape","guava"]):
+		input("Robo-pup: Ooh, getting fruity up in here! I like your fruit style!" + enter)
+	elif check(snape, )
+def check(str, array):
+	for word in array:
+		if str.find(word):
+			return True
+	return False
+	
+def talk(name, text):
+	return input(name + ": " + text + "\n> ").lower()
