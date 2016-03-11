@@ -264,7 +264,7 @@ def garCHOMP():
 				
 		elif gible == "4":
 			if stage[:3] == "ouch":
-				awwpuppy = -50 # He's really hurt
+				awwpuppy = -500 # He's really hurt
 			awwpuppy -= 1
 			if awwpuppy >= 1:
 				input("Ralphy's morality drops to zero! GAME OVER")
