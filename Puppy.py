@@ -1,4 +1,4 @@
-import math
+import random # random import
 '''
 VERY sorry to anyone who wants to look at the source code, as I presume it will be painful. I made the executive decision
 to write all the battles in code, as it would allow a greater freedom and ease when making them which a 'battle object'
@@ -304,7 +304,7 @@ def horribleCoder():
 			else:
 				input("Gene is tired of your talking. He can't even count to " + str(blahErrors) + " anyways!")
 			blah += 1
-			blahErrors += int(random(1, 8))
+			blahErrors += int(random.random() * 7 + 1)
 		elif brb == "2":
 			if prah < 3:
 				input("Gene likes being pet. Moar plz")
@@ -327,8 +327,7 @@ def horribleCoder():
 	return True;
 
 def CATQUESTIONMARK():
-
-	input("--| Begin Battle! Random Puppy |--")
+	input("--| Begin Battle! TheHappieCat |--")
 	stage = 0
 	while True:
 		brb = input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
@@ -345,6 +344,7 @@ def CATQUESTIONMARK():
 			print("Invalid Command!")
 			stage -= 2
 		if stage > 15:
+			input("TheHappieCat senses your determination. She nominates you for an Oscar.")
 			input("Uhh, CAT BEFRIENDED, I think. You win?")
 			break
 	return True;

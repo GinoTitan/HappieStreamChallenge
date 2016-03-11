@@ -1,5 +1,7 @@
 '''
 Hi Happie! I got a GitHub AND a Reddit just to compete in this challenge, and so far, it has been a blast. 
+I'm going to be on a D.C. school trip from Saturday to next Friday, so I'll still be checking on the competition when I can.
+Oh! looks like we have some imported goods for the program!
 '''
 
 import Puppy #So true...
@@ -10,10 +12,10 @@ enter = " (Press ENTER to continue...)"
 name = input("???: Hello, human! Oh...you must be the trainer the owner hired. Well, I'm Spot. Nice to meet you! Wait...\nWhats your name?\n> ")
 while len(name) < 4:
 	name = input("Spot: That name's TOO short! Try again, with some more of those letter things on your 'typey box' there!\n> ")
-'''
+
 asciiScramble = chr(ord(name[0]) + 1) + name[1:]
 input("Spot: Ooh, \"" + name + "\"! I like it. Us puppies are very fond of anything that rhymes with " + asciiScramble + "!" + enter)
-input("Spot: " + name + ", you have no idea how hard this job will be. Hundreds of millions of trainers apply here, only to run away in pure terror. You must have the stuff, seeing how you got the job.")
+input("Spot: " + name + ", you have no idea how hard this job will be. Hundreds of billions of trainers apply here, only to run away in pure terror. You must have the stuff, seeing how you got the job.")
 input("Spot: Wait. Don't tell me. YOU'RE AN UNTRAINED PUPPY TRAINER! Don't worry, though. I consider myself an expert in puppy training, as I have firsthand knowledge of how puppies work. Follow me!" + enter)
 input("Spot: All right, so you can [Pet], [Talk], or [Play] with any kind of puppy, but there are some extra ones as well, for specific puppies. You need to judge what you should do based on how the puppy is acting." + enter)
 input("Spot: So, I'll pretend I'm a random puppy, and you try to befriend me. Let's go!" + enter)
@@ -46,7 +48,7 @@ input("Spot: Ralphy." + enter)
 input("Baxter: Spot, we need to take care of the issue with Robo-pup before it becomes sentient and decides we're a waste of oxygen!" + enter)
 input("Spot: 'It' is a HE, Baxter! And Robo-pup is NOT any threat! The one who really needs help is Ralphy. He's so sad right now, and his biting issue is getting worse." + enter)
 input("Baxter: You're ridiculous, Spot. I knew Robo-pup was on to something the moment IT was brought in. We need to take it down as soon as physically possible. With Ralphy...we can try him after." + enter)
-'''
+
 typePlz = input("Spot: " + name + ", I hate to put you on the spot, but should we try helping [1] Robo-pup, or [2] Ralphy?\n> ")
 
 while typePlz != "1" and typePlz != "2":
@@ -58,13 +60,13 @@ if typePlz == "1":
 	input("Baxter: Okay, well " + name + " has decided, just like you wanted. So let's go to Robo-pup's room." + enter)
 	input("Baxter: I'd prefer if you'd do this alone...Robo-pup doesn't exactly like me..." + enter)
 	input("Robo-pup: [Beeping]" + enter)
-	#returnSnape = Puppy.Phi("Robo-pup")
-	#while not returnSnape:
-		#input("Try again!")
-		#returnSnape = Puppy.Phi("Robo-pup")
+	returnSnape = Puppy.Phi("Robo-pup")
+	while not returnSnape:
+		input("Try again!")
+		returnSnape = Puppy.Phi("Robo-pup")
 	input("Baxter: Whew! I thought you were never going to come out! So glad you 'took care' of Robo-pup!" + enter)
 	print("Robo-pup: Hello, Baxter!")
-	time.sleep(0.2) # Delay 4 Comedy
+	time.sleep(0.3) # Delay 4 Comedy
 	input("Baxter: Ahhh! Robo-pup!" + enter)
 	input("Baxter: He's still alive? That's not how it should've gone!" + enter)
 	input("Spot: It's exactly how I wanted it to go. Robo-pup isn't evil, Baxter!" + enter)
@@ -95,7 +97,35 @@ else:
 	input("Spot: Okay, Baxter. If you insist. But right now, we are taking care of Ralph." + enter)
 	input("Ralph: [Growling]" + enter)
 	input("Spot: Well...good luck, " + name + "." + enter)
-	Puppy.Phi("Ralphy")
+	returnwhy = Puppy.Phi("Ralphy")
+	while not returnwhy:
+		input("Try again!" + enter)
+		returnwhy = Puppy.Phi("Ralphy")
+	input("Spot: " + name + "! You did it! Oh my goodness, Ralphy! You look happy!" + enter)
+	input("Ralphy: Yeah." + enter)
+	input("Baxter: Wow, Ralphy! I'm just glad you're here. It's been too long." + enter)
+	input("Spot: Listen, Ralphy. " + name + " needs to get to Robo-pup. We'll just stay here. Okay?" + enter)
+	input("Ralphy: Okay.")
+	input("Baxter: It's down the hall to the right. Make it quick." + enter)
+	input("Robo-pup: [Beeping]" + enter)
+	while not returnSnape:
+		input("Try again!")
+		returnSnape = Puppy.Phi("Robo-pup")
+	input("Spot: There you are, " + name + "!" + enter)
+	input("Baxter: " + name + "? Why is Robo-pup following you around?" + enter)
+	input("Robo-pup: I'm a friend, Baxter. Why won't you believe me?")
+	input("Baxter: Great. Now you AND Spot AND " + name + ". You're all friends and now you're cutting me off." + enter)
+	input("Robo-pup: So why can't WE be friends?" + enter)
+	input("Baxter: ..." + enter)
+	input("Baxter: ...Fine." + enter)
+	print("Spot: Yay!")
+	input("Robo-pup: Yay!")
+	input("Spot: And great news, " + name + "; I can read minds now! I have ze MIND CONTROL POWAHZ! Check it out." + enter)
+	input(name + "-Spot" + ": Herp derp! Derpity derp! My name is " + asciiScramble + " the puppie traner! Ahuhuhuhu!!!1" + enter)
+	input("Baxter: Very funny, Spot." + enter)
+	input("Spot: It's never too late to control YOU, Baxter!" + enter)
+	input("Baxter: Hah! Doesn't work. I've developed an immunity from the 18-some doses of 'mind control'.")
+	input("Robo-pup: Wow, quite the show you two are putting on. Quite the show." + enter)
 
 input("Spot: Thank you, " + name + ". Thank you for everything." + enter)
 print("Spot: Thank you!")
@@ -117,6 +147,7 @@ revero = "3"
 while revero != "1" and revero != "2":
 	revero = input("1: [Battle Creator] 2: [Quit]\n> ")
 if revero == "2":
+	input("See you later!")
 	f = 5/0
 Puppy.Phi("Gene")
 input("Well Done. I am now great friends with at least 5 people or something.")
@@ -145,9 +176,9 @@ Dear Happie,
 			Slimes.push(new Slime(200, 10, "Magic")) // Save the Animals!
 		}
 	I am very pleased to say Python only uses a colon and a tabbed area, so something like this would become absurd:
-		if Slime.health <= 0 or ||.usage == "Stupid" and or.usage == "Obviously Superior"
+		if Slime.health <= 0
 		:
-			Slimes.push(new Slime(200, 10, "Magic")) // Save the Animals!
+			Slimes.append(new Slime(200, 10, "Magic")) // Save the Animals!
 	Thank you for your consideration for an Oscar.
 With all due respect, Gene.
 '''
