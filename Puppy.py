@@ -1,3 +1,4 @@
+import math
 '''
 VERY sorry to anyone who wants to look at the source code, as I presume it will be painful. I made the executive decision
 to write all the battles in code, as it would allow a greater freedom and ease when making them which a 'battle object'
@@ -18,21 +19,19 @@ veggies = ["broccoli", "carrot","cauliflower","eggplant","pupp","potato","rotten
 
 def Phi(name):
 	if name == "Spot":
-		spotify()
+		return spotify()
 	elif name == "Baxter":
-		hashtagAnime()
+		return hashtagAnime()
 	elif name == "Robo-pup":
-		evieBot(False)
-	elif name == "Robo-pup2":
-		evieBot(True)
+		return evieBot()
 	elif name == "Ralphy":
-		garCHOMP(False)
-	elif name == "Ralphy2":
-		garCHOMP(True)
-	else:
-		return False;
-	return True
-	
+		return garCHOMP()
+	elif name == "Gene":
+		return horribleCoder()
+	elif name == "CAT?":
+		return CATQUESTIONMARK()
+	return False
+
 def spotify():
 	input("--| Begin Battle! Random Puppy |--")
 	stage = "start"
@@ -144,25 +143,22 @@ def hashtagAnime():
 	input("PUPPY BEFRIENDED! You win!")
 	return True;
 	
-def evieBot(boolean):
-	mood = "Ternary"
+def evieBot():
 	input("--| Begin Battle! Robo-pup Charles IV |--")
 	input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
 	input("I will follow in the footsteps of Baxter and refrain from using the normal battle system." + enter)
 	input("--| Begin Open Ended Conversation! With your host, Robo-pup Charles IV |--")
 	snape = talk("Robo-pup","Hello! How are you doing?").lower()
 	if check(snape, sad):
-		mood = False
 		snape = talk("Robo-pup","So sorry you're not feeling well. Anything I can do to help?").lower()
 		if check(snape, activities):
 			input("Robo-pup: I believe I can do that." + enter)
 		else:
 			input("Robo-pup: I don't think I could do THAT, but I'll do my best to do something else." + enter)
 	elif check(snape, glad):
-		mood = True
 		input("Robo-pup: Glad to hear it." + enter)
-	snape = talk("Robo-pup", "Do you like any kind of food?").lower()
-	if check(snape, maths) or snape[0:1] = "e " or snape[0:1] = "e.":
+	snape = talk("Robo-pup", "what foods do you like?").lower()
+	if check(snape, maths) or snape[0:1] == "e " or snape[0:1] == " e.":
 		input("Mmm! Mathematical Constants!" + enter)
 	elif check(snape, sweets):
 		input("Robo-pup: I hear those are bad for your health." + enter)
@@ -171,21 +167,184 @@ def evieBot(boolean):
 	elif check(snape, veggies):
 		input("They may taste horrible, but they're good for you I guess!" + enter)
 	else:
-		input("Sorry, no idea what THAT is! Sounds delicious though." + enter)
-	print("Robo-pup","BTW Dude, I'm gonna take over the world and stuff, you wanna help?")
+		input("Sorry, no idea what THAT is! Sounds delicious though. I'm looking that up later." + enter)
+	print("Robo-pup: BTW Dude, I'm gonna take over the world and stuff, you wanna help?")
 	draw = "Farts"
 	while draw != "1" and draw != "2":
-		draw = input("Robo-pup turns around. An important looking red wire is sticking out. 1: [Cut Wire] 2. [Don't Cut]\n> ")
-	if draw == 1:
+		draw = input("Whoosh! Robo-pup turns around. An important looking red wire is sticking out. 1: [Cut Wire] 2. [Don't Cut]\n> ")
+	if draw == "1":
 		input("Before you could cut it with a conveniently placed wire cutter, Robo-pup turns around and sees you trying to kill him." + enter)
 		input("He looks surprised. Now angry." + enter)
 		input("That looks like a chainsaw. Better run. GAME OVER" + enter)
+		return False
+	else:
+		input("He turns back around immediately. Nice call." + enter)
+		input("Robo-pup: Hah, in jest, of course. I was 'JK`ing', as Baxter would say." + enter)
+		input("Robo-pup: Ah, Baxter. I wish we could get along better. He seems kind." + enter)
+		talk("Robo-pup", "Any advice for me?")
+		input("Robo-pup: Mmm, I suppose so. Baxter is...complicated. He hasn't liked me since I got here, but I suppose I haven't been too great either. I think that can change." + enter)
+		input("Robo-pup: And Spot. She's tried to get along with me, and I've tried to get along, but with Baxter..." + enter)
+		input("Robo-pup: Thank you, human. You've talked to me. And tell Baxter I've been sentient and have been using personal pronouns since 2 days ago." + enter)
+		input("PUPPY BEFRIENDED! You win!")
+		return True
+
+def garCHOMP():
+	morality = " You lost morality!" + enter
+	input("--| Begin Battle! Ralphy |--")
+	gible = input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
+	while gible != "1" and gible != "2" and gible != "3":
+		print("Invalid Command")
+		gible = input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
 	
-def check(str, array):
+	docterwho = "noJUSTtheDOCTER"
+	if gible == "1":
+		docterwho = "talk"
+	elif gible == "2":
+		docterwho = "pet"
+	elif gible == "3":
+		docterwho = "play"
+	
+	input("Before you could " + docterwho + ", Ralphy bit you on the hand!" + morality)
+	moral = 4
+	awwpuppy = 5
+	stage = "start"
+	while True:
+		gible = input("Morality: " + str(moral) + "/5\t1: [Talk] 2: [Pet] 3: [Play] 4: [Hit]\n> ")
+		while gible != "1" and gible != "2" and gible != "3" and gible != "4":
+			print("Invalid Command")
+			gible = input("Morality: " + str(moral) + "/5\t1: [Talk] 2: [Pet] 3: [Play] 4: [Hit]\n> ")
+			
+		if gible == "1":
+			if stage == "start":
+				input("Ralphy is growling softly." + enter)
+				stage = "starty"
+			elif stage == "starty":
+				input("Ralphy maintains his growl." + enter)
+				stage = "starter"
+			elif stage == "starter":
+				input("The growling stops. He still maintains his spot and glare." + enter)
+				stage = "startply"
+			elif stage == "startply":
+				input("Ralphy is approaching hesitantly. He wants to play with you." + enter)
+				stage = "playPLZ"
+			elif stage == "playPLZ":
+				input("Ralphy appears very intent on playing with you now." + enter)
+			elif stage == "ouch" or stage == "ouchy":
+				input("Ralphy pretends he's not listening." + enter)
+		elif gible == "3":
+			if stage == "start" or stage == "starty" or stage == "starter" or stage == "startply":
+				input("Ralphy sees you trying, but he doesn't care.")
+			elif stage == "playPLZ":
+				input("Finally, Ralphy is having some fun! You and Ralphy are having the time of your lives!" + enter)
+				input("Ralphy is so excited! But in his excitement, he accidentally bites your hand!" + morality)
+				moral -= 1
+				if moral <= 0:
+					input("No more morality! But you hung on for Ralphy." + enter)
+				input("Now Ralphy is back in his corner. He's whimpering." + enter)
+				stage = "ouch"
+			elif stage == "ouch" or stage == "ouchy":
+				input("Ralphy doesn't look like he's up for playing right now." + enter)
+		elif gible == "2":
+			if stage == "start" or stage == "starty" or stage == "starter" or stage == "startply":
+				input("As you reach towards Ralphy, he bites you!" + morality)
+				moral -= 1
+				if moral <= 0:
+					input("No more morality! GAME OVER")
+			elif stage == "playPLZ":
+				input("Ralphy knows your good intent, but avoids getting pet." + enter)
+			elif stage == "ouch":
+				input("Ralphy looks up at you. He doesn't want to bite you. He doesn't want to hurt you any more.")
+				stage = "ouchy"
+			elif stage == "ouchy":
+				input("Ralphy gets up. He sits down in front of you." + enter)
+				input("Ralphy: ...Th..." + enter)
+				input("Ralphy: Thank you." + enter)
+				input("PUPPY BEFRIENDED! You win!")
+				return True
+				
+		elif gible == "4":
+			if stage[:3] == "ouch":
+				awwpuppy = -50 # He's really hurt
+			awwpuppy -= 1
+			if awwpuppy >= 1:
+				input("Ralphy's morality drops to zero! GAME OVER")
+				return False
+			input("Ralphy lost morality! " + str(awwpuppy) + "/5 Remaining!")
+			stage = "start"
+
+def check(straw, array):
 	for word in array:
-		if str.find(word):
+		if straw.find(word) != -1:
 			return True
 	return False
 	
 def talk(name, text):
+
 	return input(name + ": " + text + "\n> ").lower()
+
+def horribleCoder():
+	input("--| Begin Battle! Gene Smith, Certified God of this Universe |--")
+	blah = 0
+	prah = 0
+	swah = 0
+	blahErrors = 0
+	an = False
+	nd = False
+	ad = False
+	
+	while True:
+		brb = input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
+		if brb == "1":
+			if blah == 0:
+				input("As you're talking, Gene is taking note of your grammatical errors.")
+			elif blah == 1:
+				input("Gene is counting all grammatical errors you make as a game.")
+			elif blah < 5:
+				input("Gene has counted " + str(blahErrors) + " in your speech so far.")
+			else:
+				input("Gene is tired of your talking. He can't even count to " + str(blahErrors) + " anyways!")
+			blah += 1
+			blahErrors += int(random(1, 8))
+		elif brb == "2":
+			if prah < 3:
+				input("Gene likes being pet. Moar plz")
+			else:
+				input("Too much pets. No moar pets plz.")
+				nd = True
+			prah += 1
+		elif brb == "3":
+			if swah < 5:
+				input("Gene loves playing games. Moar plz.")
+			else:
+				input("Huff. Puff. Gene is tired now. No moar play plz.")
+				ad = True
+			swah += 1
+		else:
+			print("Invalid Command!")
+		if an and nd and ad:
+			input("PUPPY BEFRIENDED! You win!")
+			break
+	return True;
+
+def CATQUESTIONMARK():
+
+	input("--| Begin Battle! Random Puppy |--")
+	stage = 0
+	while True:
+		brb = input("1: [Talk] 2: [Pet] 3: [Play]\n> ")
+		if brb == "1":
+			input("TheHappieCat ignored your talking. She's a cat, after all." + enter)
+			stage += 1
+		elif brb == "3":
+			input("But TheHappieCat didn't want to play. She's a cat, after all." + enter)
+			stage += 1
+		elif brb == "2":
+			input("TheHappieCat avoided the pet. She's a cat, after all." + enter)
+			stage += 1
+		else:
+			print("Invalid Command!")
+			stage -= 2
+		if stage > 15:
+			input("Uhh, CAT BEFRIENDED, I think. You win?")
+			break
+	return True;
