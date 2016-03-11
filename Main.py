@@ -3,6 +3,7 @@ Hi Happie! I got a GitHub AND a Reddit just to compete in this challenge, and so
 I'm going to be on a D.C. school trip from Saturday to next Friday, so I'll still be checking on the competition when I can.
 Oh! looks like we have some imported goods for the program!
 '''
+# 535 lines of code!?!?
 
 import Puppy #So true...
 import time #yet another useful thingy, time is
