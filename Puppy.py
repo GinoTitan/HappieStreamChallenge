@@ -2,9 +2,8 @@ import random # random import
 '''
 VERY sorry to anyone who wants to look at the source code, as I presume it will be painful. I made the executive decision
 to write all the battles in code, as it would allow a greater freedom and ease when making them which a 'battle object'
-just couldn't implement without some skill beyond my programming experience, the equivalent of a 6-year-old. I have made multiple
-arrays for a certain battle where it will find those items in a string and respond accordionly. Feel free to add some items
-via my subreddit. Thanks for checking under the hood and enjoy!
+just couldn't implement without some skill beyond my programming experience, the equivalent of a 6-year-old.
+Thanks for checking under the hood and enjoy!
 '''
 
 enter = " (Press ENTER to continue...)"

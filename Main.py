@@ -109,6 +109,7 @@ else:
 	input("Ralphy: Okay.")
 	input("Baxter: It's down the hall to the right. Make it quick." + enter)
 	input("Robo-pup: [Beeping]" + enter)
+	returnSnape = False
 	while not returnSnape:
 		input("Try again!")
 		returnSnape = Puppy.Phi("Robo-pup")
