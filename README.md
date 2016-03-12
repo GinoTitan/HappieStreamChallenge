@@ -9,6 +9,5 @@ So join the puppies in this game lacking any thrilling narrative, in this text a
 
 **NOTE: THIS IS A WORK IN PROGRESS. ANYTHING MAY BE EDITED, ADDED, OR REMOVED FROM THE EXPERIENCE.**
 
-[Happie's Subreddit](https://www.reddit.com/r/TheHappieMakers)
-
+[Happie's Subreddit](https://www.reddit.com/r/TheHappieMakers)  
 [My Subreddit (Currently Not Up)](https://www.reddit.com/r/GinoTitan)
